@@ -30,11 +30,11 @@
     },
     created () {
       this.$http
-          .get('/api/hello')
-          .then((res) => {
-            this.msg = res.body.message
-          })
-          .catch((ex) => console.log(ex))
+        .get('/api/values')
+        .then((res) => {
+          this.msg = res.data[0];
+        })
+        .catch((ex) => console.log(ex))
     }
   }
 </script>
