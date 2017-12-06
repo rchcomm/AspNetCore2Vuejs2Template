@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Examples;
 using System.Net.Http;
 
-namespace Template.Controllers
+namespace Template.V1Api.Controllers
 {
     public class ValuesController : BaseV1Controller
     {

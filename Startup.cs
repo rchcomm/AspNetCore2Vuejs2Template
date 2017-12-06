@@ -24,6 +24,7 @@ namespace Template
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddApiVersioning();
 
             services.AddSwaggerGen(c =>
             {

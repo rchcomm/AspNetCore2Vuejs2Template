@@ -7,10 +7,10 @@ using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Examples;
 using System.Net.Http;
 using Microsoft.AspNetCore.Authorization;
+using Template.Controllers;
 
-namespace Template.Controllers
+namespace Template.V1Api.Controllers
 {
-    [Route("api/[controller]")]
     public class BaseV1Controller : BaseCommonController
   {
         public BaseV1Controller()

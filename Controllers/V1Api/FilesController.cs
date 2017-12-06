@@ -7,19 +7,20 @@ using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Examples;
 using System.Net.Http;
 using Microsoft.AspNetCore.Authorization;
+using Template.Models;
 
-namespace Template.Controllers
+namespace Template.V1Api.Controllers
 {
     public class FilesController : BaseV1Controller
     {
         // GET: api/Files
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<File> Get()
         {
             //HttpResponseMessage message = new HttpResponseMessage();
             //message.Content = new StringContent("sdf");
 
-            return new string[] { "value1", "value2" };
+            return new List<File> { new File() { Id = 1, Name = "File1" }, new File() { Id = 2, Name = "File2" } };
         }
 
         // GET: api/Files/5
