@@ -8,6 +8,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Swashbuckle.AspNetCore.Swagger;
 using Swashbuckle.AspNetCore.Examples;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Versioning;
 
 namespace Template
 {
@@ -24,7 +26,16 @@ namespace Template
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddApiVersioning();
+            services.AddApiVersioning(o =>
+            {
+                //GET api/helloworld HTTP/1.1
+                //host: localhost
+                //accept: text / plain; v = 1.0
+                o.ApiVersionReader = new MediaTypeApiVersionReader();
+                o.AssumeDefaultVersionWhenUnspecified = true;
+                o.ApiVersionSelector = new CurrentImplementationApiVersionSelector(o);
+                //o.DefaultApiVersion = new ApiVersion(new DateTime(2017, 12, 1), 1, 0, "1.0");
+            });
 
             services.AddSwaggerGen(c =>
             {

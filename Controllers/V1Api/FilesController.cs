@@ -31,23 +31,23 @@ namespace Template.V1Api.Controllers
             return "value_" + id;
         }
 
-    // POST: api/Files
-    [HttpPost]
-    public void Post([FromBody]string value)
-    {
-    }
+        // POST: api/Files
+        [HttpPost]
+        public void Post([FromBody]string value)
+        {
+        }
 
-    // PUT: api/Files/5
-    [HttpPut("{id}")]
-    public void Put(int id, [FromBody]string value)
-    {
-    }
+        // PUT: api/Files/5
+        [HttpPut("{id}")]
+        public void Put(int id, [FromBody]string value)
+        {
+        }
 
-    // DELETE: api/ApiWithActions/5
-    //[SwaggerRequestExample(typeof(DeliveryOptionsSearchModel), typeof(DeliveryOptionsSearchModelExample))]
-    [HttpDelete("{id}")]
-    public void Delete(int id)
-    {
+        // DELETE: api/ApiWithActions/5
+        //[SwaggerRequestExample(typeof(DeliveryOptionsSearchModel), typeof(DeliveryOptionsSearchModelExample))]
+        [HttpDelete("{id}")]
+        public void Delete(int id)
+        {
+        }
     }
-  }
 }
