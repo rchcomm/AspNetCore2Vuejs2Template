@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Template.Controllers
 {
-    public class FilesController : BaseController
+    public class FilesController : BaseV1Controller
     {
         // GET: api/Files
         [HttpGet]

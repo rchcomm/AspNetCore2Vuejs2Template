@@ -30,7 +30,7 @@
     },
     created () {
       this.$http
-        .get('/api/values')
+        .get('/api/v1/values')
         .then((res) => {
           this.msg = res.data[0];
         })

@@ -9,7 +9,7 @@ using System.Net.Http;
 
 namespace Template.Controllers
 {
-  public class FoldersController : BaseController
+  public class FoldersController : BaseV1Controller
   {
     // GET: api/Folders
     [HttpGet]

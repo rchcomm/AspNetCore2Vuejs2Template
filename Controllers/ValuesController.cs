@@ -9,7 +9,7 @@ using System.Net.Http;
 
 namespace Template.Controllers
 {
-    public class ValuesController : BaseController
+    public class ValuesController : BaseV1Controller
     {
         // GET: api/Values
         [HttpGet]

@@ -11,10 +11,9 @@ using Microsoft.AspNetCore.Authorization;
 namespace Template.Controllers
 {
     [Produces("application/json")]
-    [Route("api/[controller]")]
-    public class BaseController : Controller
+    public class BaseCommonController : Controller
     {
-        public BaseController()
+        public BaseCommonController()
         {
 
         }
