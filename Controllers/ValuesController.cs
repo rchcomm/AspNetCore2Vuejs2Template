@@ -9,9 +9,7 @@ using System.Net.Http;
 
 namespace Template.Controllers
 {
-    [Produces("application/json")]
-    [Route("api/Values")]
-    public class ValuesController : Controller
+    public class ValuesController : BaseController
     {
         // GET: api/Values
         [HttpGet]
@@ -24,12 +22,12 @@ namespace Template.Controllers
         }
 
         // GET: api/Values/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}")]
         public string Get(int id)
         {
             return "value";
         }
-        
+
         // POST: api/Values
         [HttpPost]
         public void Post([FromBody]string value)
